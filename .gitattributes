@@ -1,0 +1,89 @@
+# Save as .gitattributes in root of repo
+# Time-stamp: <2015-01-05 17:50:57 Kiongku>
+
+# Set default behaviour, in case users don't have core.autocrlf set
+* text=auto
+
+# Explicitly declare text files we want to always be normalized
+# and converted to native line endings on checkout
+*.asm		 text
+*.c		 text
+*.clg		 text
+*.conf		 text
+*.cpp		 text
+*.cs		 text
+*.css		 text
+*.csv		 text
+*.cxx		 text
+*.dtd		 text
+*.erl		 text
+*.fs		 text
+*.fsx		 text
+*.h		 text
+*.hs		 text
+*.hxx		 text
+*.htm		 text
+*.html		 text
+*.ini		 text
+*.java		 text
+*.js		 text
+*.jsp		 text
+*.less		 text
+*.lisp		 text
+*.lua		 text
+*.m		 text
+*.php		 text
+*.properties	 text
+*.py		 text
+*.rb		 text
+*.sass		 text
+*.scss		 text
+*.sql		 text
+*.svg		 text
+*.xml		 text
+*.xsd		 text
+*.xsl		 text
+.htaccess	 text
+
+# Denote all files that are truly binary and should not be modified
+*.7z	 binary
+*.doc	 binary
+*.docx	 binay
+*.dot	 binary
+*.eot	 binary
+*.fla	 binary
+*.flv	 binary
+*.gif	 binary
+*.gz	 binary
+*.ico	 binary
+*.jar	 binary
+*.jpg	 binary
+*.mov	 binary
+*.mp3	 binary
+*.mp4	 binary
+*.otf	 binary
+*.png	 binary
+*.swf	 binary
+*.ttf	 binary
+*.woff	 binary
+*.xls	 binary
+*.zip	 binary
+
+# Custom for Visual Studio
+*.cs		 diff=csharp
+*.sln		 merge=union
+*.csproj	 merge=union
+*.vbproj	 merge=union
+*.fsproj	 merge=union
+*.dbproj	 merge=union
+
+*.doc	 diff=astextplain
+*.DOC	 diff=astextplain
+*.docx	 diff=astextplain
+*.DOCX	 diff=astextplain
+*.dot	 diff=astextplain
+*.DOT	 diff=astextplain
+*.pdf	 diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain

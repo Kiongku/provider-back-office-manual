@@ -1,0 +1,153 @@
+% shared latex style file for synergy innovations document
+
+% Package Header
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{../texmf/syninno}%
+[2015/01/09 Synergy Innovations Shared Style]
+
+%% Default required packages
+\RequirePackage{caption}
+\RequirePackage{cite}
+% provides advance options for page setup
+% fancyhdr compliance with memoir
+\let\footruleskip\undefined
+\RequirePackage{fancyhdr}
+% library for graphics manipulation
+\RequirePackage{graphicx}
+% provide document hyperlinks
+\RequirePackage{hyperref}
+% provides advance formatting for references
+% fancyref compliance with memoir
+\let\figref\fref % move memoir's fref command to figref
+\let\fref\relax % allow fancyref to use fref
+\RequirePackage{fancyref}
+\RequirePackage{nameref} % allows creating references  by name
+% advance formatting for source code text
+\RequirePackage{listings}
+% allows the use of H options to force float placement
+\RequirePackage{float}
+% defines \FloatBarrier that floats cannot cross over
+\RequirePackage{placeins}
+% allows the composition of the document with smaller files
+\RequirePackage{subfiles}
+% tikz package loads xcolor package by default,
+% pass the below options to xcolor through tikz package
+\PassOptionsToPackage{dvipsnames,svgnames}{xcolor}
+\RequirePackage{tikz}
+%\RequirePackage[numbers,sort]{natbib}
+%\RequirePackage{algorithm2e} % need to be loaded after natbib
+\RequirePackage[export]{adjustbox}
+\RequirePackage{fix-cm}
+% put draft watermark as foreground element
+% this fix issues where images might be over the watermark
+\RequirePackage[printwatermark]{xwatermark}
+% allows the easy declariong of 1st, 2nd, 3rd, 4th, ...
+\RequirePackage[super]{nth}
+% allows advance control over enumeration
+\RequirePackage{enumitem}
+% modify opening and closing quotes for verbatim
+\RequirePackage{upquote}
+
+% hyperref setup
+\hypersetup{
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
+}
+
+% User defined grahics files path
+\graphicspath{{imgs/}}
+
+% shared colour definitions
+\definecolor{simstextcolour}{RGB}{31,73,125}
+\definecolor{titletextcolour}{RGB}{36,64,97}
+\definecolor{chapternumcolour}{RGB}{36,64,97}
+\definecolor{chapternamecolour}{RGB}{31,73,125}
+\definecolor{sectionnamecolour}{RGB}{31,73,125}
+
+% Title style
+\newcommand*\simstextfont{\fontfamily{pbk}\fontseries{m}
+  \fontshape{sc}\fontsize{15}{25}\selectfont\color{simstextcolour}}
+\newcommand*\titletextfont{\fontfamily{pbk}\fontseries{b}
+  \fontshape{sc}\fontsize{30}{40}\selectfont\color{titletextcolour}}
+
+% Table of contents style
+\renewcommand*{\cftdotsep}{\cftnodots}
+\renewcommand*{\cftchapterfont}{\color{chapternumcolour}}
+\renewcommand*{\cftchaptername}{{Chapter\space}}
+\renewcommand*{\cftchapteraftersnum}{:}
+
+% Memoir chapter style
+\newif\ifchapternonum
+\makechapterstyle{sims}{
+  \setlength\beforechapskip{-\baselineskip}
+  \renewcommand*\printchaptername{}
+  \renewcommand*\printchapternum{}
+  \renewcommand*\printchapternonum{\chapternonumtrue}
+  \renewcommand*\chaptitlefont{\fontfamily{pbk}\fontseries{db}
+    \fontshape{n}\fontsize{25}{35}\selectfont\raggedleft
+    \color{chapternamecolour}}
+  \renewcommand*\chapnumfont{\fontfamily{pbk}\fontseries{m}
+    \fontshape{n}\fontsize{1in}{0in}\selectfont\color{chapternumcolour}}
+  \renewcommand*\printchaptertitle[1]{
+    \noindent
+    \ifchapternonum
+    \begin{tabularx}{\textwidth}{X}
+      {\parbox[b]{\linewidth}{\chaptitlefont ##1}
+        \vphantom{\raisebox{-15pt}{\chapnumfont 1}}}
+    \end{tabularx}
+    \else
+    \begin{tabularx}{\textwidth}{Xl}
+      {\parbox[b]{\linewidth}{\chaptitlefont ##1}}
+      & \raisebox{-15pt}{\chapnumfont \thechapter}
+    \end{tabularx}
+    \fi
+    \par\vskip2mm\hrule
+  }
+}
+% default chapter style is sims
+\chapterstyle{sims}
+\setcounter{secnumdepth}{0}
+
+% Memoir section style
+\setsecheadstyle{\bfseries\LARGE\color{sectionnamecolour}}
+
+% Memoir subsection style
+\setsubsecheadstyle{\bfseries\large}
+
+% Memoir page style
+%\makeevenhead{titlingpage}{}{\documenttitle}{}
+%\makeoddhead{titlingpage}{}{documenttitle}{}
+
+\makeevenhead{headings}{}{}{}
+\makeoddhead{headings}{}{}{}
+\makeevenfoot{headings}{\thepage}{}{\documenttitle}
+\makeoddfoot{headings}{\documenttitle}{}{\thepage}
+\makefootrule{headings}{\textwidth}{\normalrulethickness}{\footruleskip}
+
+\copypagestyle{customplain}{plain}
+\makeevenfoot{customplain}{\thepage}{}{\documenttitle}
+\makeoddfoot{customplain}{\documenttitle}{}{\thepage}
+\makefootrule{customplain}{\textwidth}{\normalrulethickness}{\footruleskip}
+\aliaspagestyle{chapter}{customplain}
+
+\newcommand*\documenttitle{Default document title}
+
+% no indentation in paragraphs
+\setlength{\parindent}{0pt}
+\nonzeroparskip
+
+% Memoir page margins
+\setlrmargins{*}{*}{1}
+\checkandfixthelayout
+
+% Print draft in the document
+% \newsavebox\draftbox
+% \savebox\draftbox{\tikz[color=gray,opacity=0.5]\node{DRAFT};}
+% \newwatermark*[allpages,angle=45,scale=12,xpos=-30,ypos=50]{
+%   \usebox\draftbox
+% }
+
+% End of style file
+\endinput

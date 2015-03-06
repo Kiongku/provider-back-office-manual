@@ -1,0 +1,15 @@
+% openany -> chapters can start on even numbered pages
+\documentclass[12pt,a4paper,openany]{memoir}
+\usepackage{../texmf/syninno}
+\renewcommand*\documenttitle{Back Office For Provider}
+\begin{document}
+\subfile{../title/title}
+% put TOC in a group in order to apply the custom hyperref setup
+\begingroup
+\hypersetup{
+  hidelinks
+}
+\tableofcontents*
+\endgroup
+\subfile{../sims/sims}
+\end{document}
