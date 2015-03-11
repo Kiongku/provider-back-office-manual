@@ -1,0 +1,68 @@
+\documentclass[../main/main]{subfiles}
+\begin{document}
+\newpage
+\section{Re-generate / Reverse Invoice}
+\label{sec:re-generate-reverse-invoice}
+
+Upon clicking on the \textbf{Re-generate / Reverse Invoice} button,
+the area on the right-hand side of the menu will be replaced with the
+\emph{Re-generate / Reverse Invoice} screen.
+
+\includegraphics[width=\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/regenerate-reverse-invoice%
+}
+
+Previously generated invoices can be re-generated to include updates made to the
+included attendances or reversed to set the attendances inside it to `Ready to
+bill' status.
+
+The top section \emph{Invoice Search} is used to refine the search for invoices
+that will be displayed in the \emph{Invoice List} section.
+The search can be filtered by Company, Invoice number or Invoice period.
+Click on the \textbf{Search} button to retrieve the invoices matching the search
+criteria. If you do not input any search option, all invoices will be retrieved.
+
+\includegraphics[width=0.8\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/regenerate-reverse-invoices-list%
+}
+
+To select or deselect all invoices, the checkbox named
+\emph{Select/ deselect all} found at the bottom left of the screen can be used
+for this purpose.
+
+To select or deselect individual invoices, the checkbox on the left of each
+invoice in the \emph{Invoice List} can be used.
+
+When you have selected the invoices that you want to re-generate or reverse,
+click on the \textbf{Re-generate} or \textbf{Reverse} button respectively at the
+bottom right of the screen.
+
+If you clicked on the \textbf{Re-generate} button, a warning box will popup
+asking for confirmation on the action. This warning will remind the user that
+the invoice will be re-generated with the same set of attendances and pulling
+updates made to these attendances.
+
+\includegraphics[width=0.8\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/regenerate-invoice-confirm%
+}
+
+Click on the \textbf{Yes} button to continue or \textbf{No} button to cancel
+the re-generation of the invoice.
+
+If you clicked on the \textbf{Reverse} button, a warning box will popup asking
+for confirmation on the action. This warning will remind the user that reversing
+this invoice will cause the included attendances status to be set to `Ready to
+bill'. Furthermore, generating a new invoice will not necessarily contain the
+same set of attendances as in the invoice currently being reversed.
+
+\includegraphics[width=0.8\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/reverse-invoice-confirm%
+}
+
+Click on the \textbf{Yes} button to continue or \textbf{No} button to cancel
+the reversal of the invoice.
+
+The \emph{Re-generate / Reverse Invoice} screen can be closed by clicking on the
+\textbf{Close} button at the bottom right of the screen.
+
+\end{document}

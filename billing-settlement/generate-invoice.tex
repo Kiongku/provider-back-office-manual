@@ -1,0 +1,48 @@
+\documentclass[../main/main]{subfiles}
+\begin{document}
+\newpage
+\section{Generate Invoice}
+\label{sec:generate-invoice}
+
+Upon clicking on the \textbf{Generate Invoice} button,
+the area on the right-hand side of the menu will be replaced with the
+\emph{Generate Invoice} screen.
+
+\includegraphics[width=\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/generate-invoice%
+}
+
+Invoices are generated per plan. In order to display the list of plans,
+select a billing date (by default, last day of last month) and the billing
+for target. Then click on the \textbf{Search} button. The plans will then be
+listed in the \emph{Plan List} section.
+
+\includegraphics[width=\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/generate-invoice-plans%
+}
+
+To select or deselect all plans, the checkbox named \emph{Select/ deselect all}
+found at the bottom left of the screen can be used for this purpose.
+
+To select or deselect individual plans, the checkbox on the left of each plan in
+the \emph{Plan List} can be used.
+
+When you have selected the plans that you want to generate invoices for,
+click on the \textbf{Generate} button at the bottom right of the screen.
+
+Each invoice will appear as a popup window containing the pdf version of
+the invoice. The invoice can be printed from that window.
+
+Invoices are generated only for plans that have attendances with their statuses
+marked as `checked'. If there are no attendances for the selected plans, a
+message will appear in the popup window to notify you that no invoice has been
+generated.
+
+\includegraphics[width=0.5\textwidth,keepaspectratio,center]{%
+  ../billing-settlement/imgs/no-invoice-generated%
+}
+
+The \emph{Generate Invoice} screen can be closed by clicking on the
+\textbf{Close} button at the bottom right of the screen.
+
+\end{document}
