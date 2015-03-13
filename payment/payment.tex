@@ -2,8 +2,36 @@
 \begin{document}
 \newpage
 \chapter{Payment}
-\includegraphics[width=0.8\textwidth,keepaspectratio,center]{%
+The Payment sub-menu can be accessed from the menu found on the bottom
+left-hand side of the main window.
+
+\includegraphics[width=0.6\textwidth,keepaspectratio,center]{%
   ../payment/imgs/payment-menu%
 }
+
+The sub-menu contains the following items:-
+\begin{description}
+\item[Generate Doctor Fee Statement] \hfill \\
+Select doctors with pending payments to generate doctor fee statements.\\
+See \nameref{sec:generate-doctor-fee-statement} for more details.
+\item[Re-print Doctor Fee Statement] \hfill \\
+Select previously generated doctor fee statements for re-printing.\\
+See \nameref{sec:re-print-doctor-fee-statement} for more details.
+\item[Re-generate Doctor Fee Statement] \hfill \\
+Select previously generated doctor fee statements for modifications.\\
+See \nameref{sec:re-generate-doctor-fee-statement} for more details.
+\item[Mark Payment Detail] \hfill \\
+Mark previously generated doctor fee statements as paid with payment details.\\
+See \nameref{sec:mark-payment-detail} for more details.
+\item[Statement of Account] \hfill \\
+Display the current doctor fee statement for a provider.\\
+See \nameref{sec:statement-of-account} for more details.
+\end{description}
+
+\subfile{../payment/generate-doctor-fee-statement}
+\subfile{../payment/re-print-doctor-fee-statement}
+\subfile{../payment/re-generate-doctor-fee-statement}
+\subfile{../payment/mark-payment-detail}
+\subfile{../payment/statement-of-account}
 
 \end{document}
