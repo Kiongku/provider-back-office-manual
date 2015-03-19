@@ -12,4 +12,77 @@ the area on the right-hand side of the menu will be replaced with the
   ../report/imgs/attendance-tracking-report%
 }
 
+From the \emph{Attendance Tracking Report} screen, you can view and edit
+attendances as well as export the attendances to a csv file that can be opened
+in a spreadsheet program.
+
+In the \emph{Attendance Search} section, you can filter down the search criteria
+for the attendances to be displayed. At least one search criteria needs to be
+input. Click on \textbf{Search} button to perform the search.
+
+Attendances matching the search criteria will be displayed in the
+\emph{Attendance List} section. If no matching attendances were found, a
+message will appear with `No Records Found!'.
+
+You can click on the \textbf{View} button on the left to view the attendance
+in the attendance window in readonly mode.
+
+If you wish to edit the attendance, click on the \textbf{Edit} button to open
+the attendance window in edit mode. If the attendance has been billed,
+a confirmation window will open to confirm that you wish to proceed with the
+action.
+
+\includegraphics[width=0.8\textwidth,keepaspectratio,center]{%
+  ../report/imgs/edit-attendance-invoiced-warning%
+}
+
+If you scroll to the right, you can also edit the attendance status and payment
+status of the attendance.
+
+\includegraphics[width=0.8\textwidth,keepaspectratio,center]{%
+  ../report/imgs/attendance-report-list%
+}
+
+For attendances with checked, or completed status, you can choose to change them
+between either from the dropdown box in the `Attn Status' column.
+
+For attendances marked as billed which has not yet been paid, you can mark
+them as `Ready for Payment' from the dropdown box in the `Payment Status'
+column.
+
+You can also do bulk changes by clicking on the two buttons at the bottom of the
+\emph{Attendance List}. You can change all completed attendances in the list
+as checked, or all checked attendances as completed.
+
+If you did any changes to the attendance status, you can save them by clicking
+on the \textbf{Save} button at the bottom right.
+
+You can export the attendances by selecting the level of details that you wish
+from the dropdown box named `Data' and then by clicking on the \textbf{Export}
+button.
+
+There are also two special buttons on the main window at the top right named
+\textbf{Outstanding Attn.} and \textbf{Unchecked Attn.} respectively. The
+number in the red box represents the number of attendances with status either
+outstanding or unchecked. When you hover your mouse cursor over the buttons,
+a tooltip will appear that contains the date on which the count number is based
+on.
+
+\includegraphics[width=0.5\textwidth,keepaspectratio,center]{%
+  ../report/imgs/outstanding-attendances-tooltip%
+}
+
+\includegraphics[width=0.5\textwidth,keepaspectratio,center]{%
+  ../report/imgs/unchecked-attendances-tooltip%
+}
+
+When you click on the buttons, they will open the \emph{Attendance Tracking
+Report} screen and automatically perform a search.
+The visit date will be set to the date mentioned in the tooltip
+and the attendance status set to either outstanding or unchecked depending
+on which button you clicked on.
+
+The \emph{Attendance Tracking Report} screen can be closed by clicking on the
+\textbf{Close} button at the bottom right of the screen.
+
 \end{document}
